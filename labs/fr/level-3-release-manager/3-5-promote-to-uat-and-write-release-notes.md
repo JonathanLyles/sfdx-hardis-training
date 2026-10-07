@@ -5,7 +5,7 @@ description: "Protégez ce que l'UAT garde pour elle avec package-no-overwrite, 
 level: 3
 lab: 5
 lang: fr
-source_rev: "cdca81033f1a34ba8248bf6df218a9d3e533c141"
+source_rev: "9c652820abe61fac27fa86bac9eba269af742274"
 screenshots:
   - annotated/vscode/devops-pipeline-level3--create-promotion
   - annotated/vscode/pipeline-branch-modal-level3--what-it-carries
@@ -172,20 +172,24 @@ besoin de les retrouver un par un ([Lab 1.6](../level-1-contributor-basics/1-6-p
 
 ### 4. Lire les deployment actions qu'elle transporte
 
-Une fois le contrôle lancé, le commentaire sfdx-hardis gagne deux sections, **Pre-deployment Actions
-Results** et **Post-deployment Actions Results**. Ce qu'une promotion ajoute par-dessus est le
-paragraphe qui nomme la portée **(1)** : chaque Pull Request qu'elle transporte, chacune un lien.
+Une fois le contrôle lancé, le commentaire sfdx-hardis compte les actions dans la ligne **Deployment
+actions** de son tableau, et liste chacune dans la section repliée **🛠️ Deployment actions of this
+job**. Ce qu'une promotion ajoute par-dessus est sa portée **(1)** : la section repliée **ℹ️ Where the
+deployment actions and test classes come from** dit qu'elles sont rassemblées depuis le contenu de
+cette Pull Request, et la section repliée **🎫 ... tickets · ... Pull Requests** liste chaque Pull
+Request qu'elle transporte, chacune un lien.
 
 ![Les deployment actions rassemblées sur la Pull Request de promotion](../../_assets/annotated/web/github-pr-promotion-actions.png)
 
 Chaque action que n'importe quel contributeur a déclarée sur n'importe laquelle des stories mergées
-est rassemblée dans un seul tableau, avec son libellé, son type, son statut et un lien de retour vers
-la Pull Request d'où elle vient. Tout ce qui demande un humain reçoit une **liste de cases au-dessus
-du tableau**, intitulée *Manual Actions to perform before proceeding with deployment* ou *after
-deployment*. Les deux listes atterrissent sur des jobs différents : le job de contrôle porte celle
-d'avant **(2)**, pour que vous puissiez agir pendant que vous décidez, et le job de merge porte celle
-d'après. Les actions post-déploiement **(3)** affichent **skipped** sur le contrôle : un contrôle ne
-change rien dans l'org, elles attendent donc le merge.
+est rassemblée dans ce seul tableau, avec son libellé, son moment, son résultat avec la raison en
+clair, et un lien de retour vers la Pull Request d'où elle vient. Tout ce qui demande un humain
+reçoit sa propre **liste de cases**, au-dessus des sections repliées, intitulée **👋 To do by hand in
+`uat` before the deployment** ou **after the deployment**. Les deux listes atterrissent sur des jobs
+différents : le job de contrôle porte celle d'avant **(2)**, pour que vous puissiez agir pendant que
+vous décidez, et le job de merge porte celle d'après. Les actions post-déploiement **(3)** sont
+comptées **🕒 after the merge** sur le contrôle, avec la raison **Runs after the merge only** : un
+contrôle ne change rien dans l'org, elles attendent donc le merge.
 
 **Lisez-le avant de merger.** Deux choses à chercher :
 
@@ -230,9 +234,9 @@ Type RemoteSiteSetting: 1 item(s) skipped because they already exist in the targ
 **Final package.xml to deploy** affiché juste après a un élément de moins.
 
 La Pull Request le dit aussi, sans le log : le commentaire du contrôle, et celui qu'écrit ce
-déploiement, portent une section **Protected metadata (package-no-overwrite.xml)**. Ouvrez son
-tableau, **Protected components per metadata type** : il compte **1** dans la colonne **Not
-overwritten** de la ligne **RemoteSiteSetting**. Lisez-la sur le
+déploiement, portent une section repliée **🛡️ Protected by `manifest/package-no-overwrite.xml`
+(1)**. Ouvrez-la : son tableau, **Protected components per metadata type**, compte **1** dans la
+colonne **🛡️ Not overwritten** de la ligne **RemoteSiteSetting**. Lisez-la sur le
 contrôle, avant de merger : un composant que vous pensiez déployer et qui apparaît là est un
 composant que la liste protège par erreur.
 

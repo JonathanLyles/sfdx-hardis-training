@@ -5,7 +5,7 @@ description: "Livrez un hotfix Salesforce de preprod vers la production quand la
 level: 3
 lab: 7
 lang: fr
-source_rev: "227087b70542c7fdd5f235321968b5154475be67"
+source_rev: "9c652820abe61fac27fa86bac9eba269af742274"
 screenshots:
   - annotated/salesforce/validation-rule
   - annotated/vscode/welcome-custom-menu-3
@@ -159,9 +159,10 @@ Son contrôle déploie contre la production en mode validation, ce qui est exact
 ### 6. Confirmer que c'est en ligne
 
 Mergez, et regardez l'exécution **Process Deployment (sfdx-hardis)** sur `main`. Quand elle se
-termine, le commentaire sfdx-hardis dit ce qui a atteint l'org : la bannière **(1)**, la ligne de
-compteurs **(2)**, et la ligne Quick Deploy **(3)** : le merge a libéré la validation que son contrôle
-avait déjà faite sur la production, au lieu de déployer à nouveau. L'image est le commentaire d'un
+termine, le commentaire sfdx-hardis dit ce qui a atteint l'org : le verdict **✅ Deployed to `main`**
+**(1)**, la ligne **Metadata** **(2)**, et la ligne **Quick Deploy** **(3)**, **Used** : le merge a
+déployé la validation que son contrôle avait déjà faite sur la production, au lieu de déployer à
+nouveau. L'image est le commentaire d'un
 déploiement précédent, vos compteurs sont donc différents.
 
 ![Le commentaire sfdx-hardis sur une Pull Request mergée](../../_assets/annotated/web/github-pr-deployed.png)

@@ -5,7 +5,7 @@ description: "Menez une semaine entière de release manager Salesforce sans pas-
 level: 3
 lab: 11
 lang: fr
-source_rev: "1651e48fae090ca8a17bcdbaee369e4501394d2a"
+source_rev: "9c652820abe61fac27fa86bac9eba269af742274"
 screenshots:
   - annotated/web/github-star-vscode-sfdx-hardis
   - annotated/vscode/welcome-custom-menu-3
@@ -78,13 +78,13 @@ Vérifiez dans `helios-uat` que les stories sont utilisables, pas seulement dép
 
 Promouvez d'abord `uat` vers `preprod`, et vérifiez que `helios-preprod` se comporte bien. Créez
 ensuite la livraison, la Pull Request de `preprod` vers `main`, intitulée `Release ...`. Lisez la
-ligne de compteurs du commentaire sfdx-hardis et arrêtez-vous si quelque chose est supprimé auquel
+ligne **Metadata** du commentaire sfdx-hardis et arrêtez-vous si quelque chose est supprimé auquel
 vous ne vous attendiez pas. Mergez, regardez, vérifiez, faites les étapes manuelles.
 
 Tout ce que le [Lab 3.7](3-7-hotfix-and-retrofit.md) a posé sur `preprod` est déjà dans `main`, cette livraison ne devrait donc pas
-le redéplacer. Lisez la ligne de compteurs avec cela en tête : ce qui sort cette semaine est le help
+le redéplacer. Lisez la ligne **Metadata** avec cela en tête : ce qui sort cette semaine est le help
 text de Romain, les retrofits qui remontent depuis `integration`, et US-058 et US-060, qui attendent
-dans `uat` depuis le [Lab 3.10](3-10-promote-a-subset-with-promotion-branches.md). `deleted: 0` reste le nombre sur lequel s'arrêter.
+dans `uat` depuis le [Lab 3.10](3-10-promote-a-subset-with-promotion-branches.md). Un compteur `deleted` dans cette ligne reste ce sur quoi s'arrêter.
 
 **Cette promotion est aussi ce qui met fin à l'exception.** US-057, US-059 et US-061 sont parties
 seules vers `preprod` la semaine dernière ; celle-ci transporte US-058 et US-060 de manière

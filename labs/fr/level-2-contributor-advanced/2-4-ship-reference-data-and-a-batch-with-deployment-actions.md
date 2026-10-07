@@ -5,7 +5,7 @@ description: "Un déploiement vert n'est pas une fonctionnalité qui marche. Liv
 level: 2
 lab: 4
 lang: fr
-source_rev: "b7f5e0686a2d5a83a1ce183f8f4c30a684e0a129"
+source_rev: "9c652820abe61fac27fa86bac9eba269af742274"
 screenshots:
   - annotated/vscode/sidebar-commands-custom-menu-2--lab-records
   - annotated/salesforce/crew-capacity-records
@@ -324,12 +324,17 @@ marquer, et sfdx-hardis publie un commentaire **Deployment Actions** sur la Pull
 
 ![Le commentaire Deployment Actions de la Pull Request US-026](../../_assets/annotated/web/github-pr-deployment-actions.png)
 
-- **Pending manual actions** **(1)** : votre étape de délivrabilité, avec une case à cocher, pour
+Sous sa bannière, un verdict indique **In integration: 👋 1 to do by hand**, puis :
+
+- **Needs you** **(1)** : votre étape de délivrabilité, marquée 👋, avec une case à cocher, pour
   `integration`
-- **Status by org branch** **(2)** : une ligne par action, avec son moment. L'étape de délivrabilité,
-  **pre-deploy**, attend quelqu'un ; l'import et la planification, **post-deploy**, indiquent
+- **Status by org** **(2)** : une ligne par action, avec son moment. L'étape de délivrabilité,
+  **pre-deploy**, est **to do by hand** ; l'import et la planification, **post-deploy**, indiquent
   **not run in this org branch yet**, parce que le contrôle s'est arrêté avant eux, et qu'un
   contrôle ne lance ni l'un ni l'autre de toute façon
+
+Le commentaire du contrôle liste aussi l'étape, sous **👋 To do by hand in `integration` before the
+deployment**, avec sa propre case à cocher.
 
 Faites le clic dans `helios-integration` (elle affiche déjà **All email** sur vos scratch orgs, c'est
 donc une vérification de dix secondes), puis cochez la case **(1)**. Dans VS Code, **Mark as done in
@@ -361,7 +366,7 @@ Ne vous contentez pas de la coche verte. **Ouvrez l'org et regardez :**
 - L'onglet **Crew Capacity** de l'application Helios Delivery, sur sa vue de liste **All**, a 12
   enregistrements
 - **Setup > Scheduled Jobs** liste `Helios crew capacity nightly`
-- L'étape manuelle est **done** pour `integration` sous **Status by org branch**, avec la date de
+- L'étape manuelle est **done** pour `integration` sous **Status by org**, avec la date de
   votre case
 
 Vous avez fait le clic avant le merge, ce qu'exige une vraie release : la personne qui merge le fait
