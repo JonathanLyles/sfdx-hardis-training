@@ -137,8 +137,10 @@ the most useful thing on the page.
 
 ![The sfdx-hardis comment on a Pull Request](../../_assets/annotated/web/github-pr-comment.png)
 
-1. **The verdict** **(1)**, under the banner: **✅ Ready to merge into `integration`**, and a line
-   saying the deployment was only simulated in the `integration` org, so nothing changed there
+1. **The verdict** **(1)**, under the banner: **✅ Ready to merge into `integration`**, a line
+   saying the deployment was only simulated in the `integration` org, so nothing changed there,
+   and **How to merge: use Squash and merge, so the User Story arrives as one commit.** Step 4
+   does exactly that
 2. **Apex tests** **(2)**, a row of the **Check | Result** table under the verdict: the coverage,
    against the target this project sets
 3. **Metadata** **(3)**, the first row of that table: what would change. Not a list of your files:
@@ -245,11 +247,14 @@ When the deployment finishes, it writes a second comment on the Pull Request you
 ![The comment sfdx-hardis writes after the merge deployment](../../_assets/annotated/web/github-pr-deployed.png)
 
 1. **The verdict** **(1)**: **✅ Deployed to `integration`**, and this time the org really changed
-2. **Metadata** **(2)**, in the same shape as the check said it would: `Deployed: 7 components
-   changed` where the check said `7 components would change`
-3. **Quick Deploy** **(3)**: **Used**. The merge job did not start from nothing. It deployed the
-   validation the Pull Request check had already done, which is why the **Apex tests** row reads
-   **Already run during the validation**, and why it took two minutes rather than five
+2. **Metadata** **(2)**, in the same shape as the check said it would, plus how it was
+   deployed: **✅ Full Quick Deploy: 7 components changed (1 created, 6 updated)** where the check
+   said `7 components would change`. *Full*, because this project sends the whole package every
+   time. *Quick Deploy*, because the merge job did not start from nothing: it deployed the
+   validation the Pull Request check had already done, which is why it took two minutes rather
+   than five
+3. **Apex tests** **(3)**: **Already run during the validation**. The Quick Deploy reused the test
+   run of the check, so no test ran again
 
 Then open `helios-integration` from **Orgs Manager** and look at an installation.
 

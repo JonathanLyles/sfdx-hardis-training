@@ -550,7 +550,8 @@ reading this in six months can use:
 > been briefed.
 
 Then merge with **Merge pull request**. Never a squash: the cherry-picked commits and their trailers
-are what the next promotion, the retrofit and the release notes all read.
+are what the next promotion, the retrofit and the release notes all read. The **How to merge** line
+of the green check comment says it too.
 
 The **Process Deployment (sfdx-hardis)** run starts on `preprod`. When it is green, open
 `helios-preprod` and check both halves of what you did:
@@ -616,7 +617,8 @@ Both files land under **Staged Changes** with the message `Merge remote-tracking
 'origin/preprod'` already written. **Commit**, then **Save / Publish User Story** as in [Lab 3.7](3-7-hotfix-and-retrofit.md)
 step 9, and open the Pull Request into `integration`, titled `Retrofit: the promotion of US-057,
 US-059 and US-061 back down into integration`. Its **Files changed** tab is empty, and that is
-right: read the block below. Wait for its check, and merge it with **Merge pull request**.
+right: read the block below. Wait for its check, and merge it with **Merge pull request**, as the
+**How to merge** line of its comment asks.
 
 <details markdown="1"><summary>Under the hood: a Pull Request that changes no file, and why it still matters</summary>
 

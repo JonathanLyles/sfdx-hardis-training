@@ -71,10 +71,11 @@ Read the sfdx-hardis comment, top to bottom. Four things, in this order:
    size of the story, that is your cue to go and read the diff
 3. **What does it delete?** A `deleted` count in that same row, shown only when something goes,
    and the **🗑️ Deleted** column of the table, which says what kind of component goes: a field, a
-   class, a layout. Flows get more: a **Flows** row naming each changed Flow, with one diff comment
-   per Flow posted below, a line for a Flow whose only change is its status (`status only, Active →
-   Obsolete`), and a **Flow deletion** table when versions are being removed. The comment names no
-   other deleted component: the list, one row per component, is `xls/deployment-components.xlsx`
+   class, a layout. Flows are counted there like any other component, and get one thing more: a
+   diff comment of their own, **🔀 Flow** and its label, posted below for each changed Flow. A Flow
+   whose only change is its status, activated or deactivated, gets no diff comment and is named
+   nowhere, so read the diff for those. A **Flow deletion** section appears when versions are being
+   removed. The comment names no other deleted component: the list, one row per component, is `xls/deployment-components.xlsx`
    in the **sfdx-hardis reports** artifact of the check (**Summary** of its run, then **Artifacts**)
 4. **Tests and coverage.** The **Apex tests** row: the coverage against the target every time it
    was measured, or why the tests did not run, and a folded **🧪 Apex test classes** block when the
@@ -180,7 +181,7 @@ and then posted the comment through the GitHub API with the token the workflow a
 Request does not fill up with twenty robot comments. It finds itself again through a hidden marker
 carrying a message key, and there are in fact **two** such comments, each updated independently: one
 for the check job, one for the merge job. A third one collects the deployment actions, and Flows get
-one each, except a Flow whose only change is its status, which the **Flows** row names instead. A
+one each, except a Flow whose only change is its status, which gets none. A
 comment is capped at 50,000 characters on GitHub: above that, it says what it shortened.
 
 The counts it prints come from what Salesforce reported back about the deployment, not from the git

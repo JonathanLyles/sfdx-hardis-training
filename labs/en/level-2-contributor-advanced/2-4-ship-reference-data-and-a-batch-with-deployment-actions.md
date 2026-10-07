@@ -316,7 +316,8 @@ says it is. Its log names the step and the three ways to mark it, and sfdx-hardi
 
 Under its banner, a verdict reads **In integration: 👋 1 to do by hand**, then:
 
-- **Needs you** **(1)**: your deliverability step, marked 👋, with a checkbox, for `integration`
+- **Needs you** **(1)**: your deliverability step, with a checkbox, marked 👋 and followed by
+  *(org branch: integration)*
 - **Status by org** **(2)**: one row per action, with its moment. The deliverability step,
   **pre-deploy**, is **to do by hand**; the import and the schedule, **post-deploy**, read **not
   run in this org branch yet**, because the check stopped before them, and a check runs neither

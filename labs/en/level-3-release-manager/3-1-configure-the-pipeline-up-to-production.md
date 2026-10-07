@@ -489,7 +489,9 @@ themselves the first time a Pull Request goes into `preprod` and into `main`, in
 
 When both checks are green, merge with **Merge pull request**, not with a squash: this is not a
 feature, and the configuration has to travel to `uat`, `preprod` and `main` with the promotions,
-commit for commit ([Lab 1.6](../level-1-contributor-basics/1-6-pull-request-deployment-check-and-merge.md)). Then switch back to `integration`, from the branch name in the bottom left
+commit for commit ([Lab 1.6](../level-1-contributor-basics/1-6-pull-request-deployment-check-and-merge.md)). The **How to merge** line of the check comment says
+**Squash and merge**, because the branch is named like a User Story: this Pull Request is the
+exception, so merge it anyway. Then switch back to `integration`, from the branch name in the bottom left
 corner of VS Code, and **Pull** in the **Source Control** panel: your `integration` gets the
 configuration back, merged.
 

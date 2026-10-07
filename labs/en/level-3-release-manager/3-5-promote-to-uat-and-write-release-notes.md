@@ -160,7 +160,8 @@ two words apart and a list of Pull Requests reads like the history of what reach
 
 Merge it with **Merge pull request**, never with a squash: a promotion carries every commit of the
 stories it promotes, and the next promotion, the retrofit and the release notes all need to find
-them one by one ([Lab 1.6](../level-1-contributor-basics/1-6-pull-request-deployment-check-and-merge.md)).
+them one by one ([Lab 1.6](../level-1-contributor-basics/1-6-pull-request-deployment-check-and-merge.md)). The green check comment says the same on its **How to merge** line:
+**use a merge commit, never squash**.
 
 ### 4. Read the deployment actions it carries
 

@@ -168,9 +168,10 @@ Installation_Crew_Warning field integrity exception: unknown (The field "Crew_Wa
 for the object "Installation__c" doesn't exist.)
 ```
 
-The **Flows** row of its table **(2)** names your flow, and points to a second comment of its own,
-posted right below: **🔀 Flow Installation Crew Warning**, the visual diff of the flow. It draws the
-flow, and colours what your story changed. The new **Mark Warning Sent** element is green **(1)**.
+Further down, the folded line **📋 1 component failed, ... would change in the org** **(2)** opens
+a table of the components, per type, with your flow in its **❌ Failed** group. A flow is metadata
+like any other in this comment. What it gets on top is a second comment of its own, posted right
+below: **🔀 Flow Installation Crew Warning**, the visual diff of the flow. It draws the flow, and colours what your story changed. The new **Mark Warning Sent** element is green **(1)**.
 Above the diagram, a **properties changed** table gives every changed property with its value
 before and after: the description **(2)**, the formula **(3)**. The full tables of the flow are
 folded under **All properties and elements**. A reviewer reads your flow change there, without
