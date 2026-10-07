@@ -5,7 +5,7 @@ description: "Étendez une pipeline Salesforce à deux étages jusqu'à la produ
 level: 3
 lab: 1
 lang: fr
-source_rev: "ee3029d22ba45d5b0cbdb2c50c30d3e3aa93a291"
+source_rev: "107445c1699c7094cda6a3c5436cb5a4f3c0beef"
 screenshots:
   - annotated/vscode/devops-pipeline--one-column
   - annotated/web/github-new-branch
@@ -512,13 +512,11 @@ Le contrôle de cette Pull Request se connecte à `helios-integration`, et il le
 preuves la première fois qu'une Pull Request entre dans `preprod` puis dans `main`, au
 [Lab 3.6](3-6-release-to-production-and-read-dora-metrics.md), qui vous dit où regarder.
 
-Quand les deux contrôles sont verts, mergez avec **Merge pull request**, pas avec un squash : ce
-n'est pas une feature, et la configuration doit voyager vers `uat`, `preprod` et `main` avec les
-promotions, commit par commit ([Lab 1.6](../level-1-contributor-basics/1-6-pull-request-deployment-check-and-merge.md)). La ligne **How to merge** du commentaire du contrôle dit
-**Squash and merge**, parce que la branche porte un nom de User Story : cette Pull Request est
-l'exception, mergez-la quand même. Revenez ensuite sur `integration`, depuis le nom de
-branche en bas à gauche de VS Code, et faites **Pull** dans le panneau **Source Control** : votre
-`integration` récupère la configuration, mergée.
+Quand les deux contrôles sont verts, mergez comme le dit la ligne **How to merge** du commentaire
+du contrôle : **Squash and merge**, comme pour toute User Story. La configuration voyage quand même
+vers `uat`, `preprod` et `main` avec les promotions, sous la forme de ce commit unique. Revenez
+ensuite sur `integration`, depuis le nom de branche en bas à gauche de VS Code, et faites **Pull**
+dans le panneau **Source Control** : votre `integration` récupère la configuration, mergée.
 
 <details markdown="1"><summary>Sous le capot : ce que fait vraiment le flow JWT</summary>
 
