@@ -5,7 +5,7 @@ description: "Livrez un hotfix Salesforce de preprod vers la production quand la
 level: 3
 lab: 7
 lang: fr
-source_rev: "9c652820abe61fac27fa86bac9eba269af742274"
+source_rev: "ee3029d22ba45d5b0cbdb2c50c30d3e3aa93a291"
 screenshots:
   - annotated/salesforce/validation-rule
   - annotated/vscode/welcome-custom-menu-3
@@ -134,7 +134,7 @@ Petite, et son rayon d'impact tient en une phrase : **les installations annulée
 
 Quand le contrôle est vert, mergez-la avec **Squash and merge**, depuis la flèche à côté de **Merge
 pull request** **(1)** : la branche de Romain est un correctif, et un correctif se squashe comme
-chaque User Story ([Lab 1.6](../level-1-contributor-basics/1-6-pull-request-deployment-check-and-merge.md)). La promotion vers `main` qui suit est mergée, pas squashée.
+chaque User Story ([Lab 1.6](../level-1-contributor-basics/1-6-pull-request-deployment-check-and-merge.md)), ce que dit aussi la ligne **How to merge** du commentaire vert du contrôle. La promotion vers `main` qui suit est mergée, pas squashée.
 
 ![Merger une Pull Request sur GitHub](../../_assets/annotated/web/github-pr-merge.png)
 
@@ -160,9 +160,10 @@ Son contrôle déploie contre la production en mode validation, ce qui est exact
 
 Mergez, et regardez l'exécution **Process Deployment (sfdx-hardis)** sur `main`. Quand elle se
 termine, le commentaire sfdx-hardis dit ce qui a atteint l'org : le verdict **✅ Deployed to `main`**
-**(1)**, la ligne **Metadata** **(2)**, et la ligne **Quick Deploy** **(3)**, **Used** : le merge a
-déployé la validation que son contrôle avait déjà faite sur la production, au lieu de déployer à
-nouveau. L'image est le commentaire d'un
+**(1)**, la ligne **Metadata** **(2)**, qui dit comment il a été déployé, par exemple **Full Quick
+Deploy**, et ce qui a changé, et la ligne **Apex tests** **(3)**, **Already run during the
+validation** : le merge a déployé la validation que son contrôle avait déjà faite sur la production,
+au lieu de déployer à nouveau. L'image est le commentaire d'un
 déploiement précédent, vos compteurs sont donc différents.
 
 ![Le commentaire sfdx-hardis sur une Pull Request mergée](../../_assets/annotated/web/github-pr-deployed.png)
@@ -244,7 +245,10 @@ nouveau.
 ![La fin de Save / Publish, avec sa barre d'actions](../../_assets/annotated/vscode/work-save-completed.png)
 
 Ouvrez la Pull Request vers `integration`, intitulez-la
-`Retrofit: US-045 back down into integration`, attendez ses contrôles, et mergez-la. `integration`
+`Retrofit: US-045 back down into integration`, attendez ses contrôles, et mergez-la avec **Merge pull
+request**, jamais avec un squash. Le commentaire vert du contrôle dit pourquoi sur sa ligne **How to
+merge** : un retrofit rapporte des commits d'une autre branche majeure, qui doivent rester tels
+quels. `integration`
 porte maintenant tout ce que la production porte, et la prochaine story construite dessus ne peut
 plus emporter le correctif.
 

@@ -5,7 +5,7 @@ description: "Étendez une pipeline Salesforce à deux étages jusqu'à la produ
 level: 3
 lab: 1
 lang: fr
-source_rev: "1651e48fae090ca8a17bcdbaee369e4501394d2a"
+source_rev: "ee3029d22ba45d5b0cbdb2c50c30d3e3aa93a291"
 screenshots:
   - annotated/vscode/devops-pipeline--one-column
   - annotated/web/github-new-branch
@@ -514,7 +514,9 @@ preuves la première fois qu'une Pull Request entre dans `preprod` puis dans `ma
 
 Quand les deux contrôles sont verts, mergez avec **Merge pull request**, pas avec un squash : ce
 n'est pas une feature, et la configuration doit voyager vers `uat`, `preprod` et `main` avec les
-promotions, commit par commit ([Lab 1.6](../level-1-contributor-basics/1-6-pull-request-deployment-check-and-merge.md)). Revenez ensuite sur `integration`, depuis le nom de
+promotions, commit par commit ([Lab 1.6](../level-1-contributor-basics/1-6-pull-request-deployment-check-and-merge.md)). La ligne **How to merge** du commentaire du contrôle dit
+**Squash and merge**, parce que la branche porte un nom de User Story : cette Pull Request est
+l'exception, mergez-la quand même. Revenez ensuite sur `integration`, depuis le nom de
 branche en bas à gauche de VS Code, et faites **Pull** dans le panneau **Source Control** : votre
 `integration` récupère la configuration, mergée.
 

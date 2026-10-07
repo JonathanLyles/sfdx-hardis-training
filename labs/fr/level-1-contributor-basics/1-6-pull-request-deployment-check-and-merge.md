@@ -5,7 +5,7 @@ description: "Ouvrez une Pull Request GitHub, lisez le contrôle de déploiement
 level: 1
 lab: 6
 lang: fr
-source_rev: "9c652820abe61fac27fa86bac9eba269af742274"
+source_rev: "ee3029d22ba45d5b0cbdb2c50c30d3e3aa93a291"
 screenshots:
   - annotated/web/github-pr-checks
   - annotated/web/github-pr-comment
@@ -143,9 +143,10 @@ Quand le contrôle de déploiement se termine, sfdx-hardis écrit un commentaire
 
 ![Le commentaire sfdx-hardis sur une Pull Request](../../_assets/annotated/web/github-pr-comment.png)
 
-1. **Le verdict** **(1)**, sous la bannière : **✅ Ready to merge into `integration`**, et une ligne
+1. **Le verdict** **(1)**, sous la bannière : **✅ Ready to merge into `integration`**, une ligne
    qui dit que le déploiement a seulement été simulé dans l'org `integration`, donc que rien n'y a
-   changé
+   changé, et **How to merge: use Squash and merge, so the User Story arrives as one commit.**
+   L'étape 4 fait exactement cela
 2. **Apex tests** **(2)**, une ligne du tableau **Check | Result** sous le verdict : la couverture,
    face à l'objectif que fixe ce projet
 3. **Metadata** **(3)**, la première ligne de ce tableau : ce qui changerait. Pas une liste de vos
@@ -262,12 +263,14 @@ de merger :
 ![Le commentaire que sfdx-hardis écrit après le déploiement de merge](../../_assets/annotated/web/github-pr-deployed.png)
 
 1. **Le verdict** **(1)** : **✅ Deployed to `integration`**, et cette fois l'org a vraiment changé
-2. **Metadata** **(2)**, sous la même forme que ce que le contrôle annonçait : `Deployed: 7
-   components changed` là où le contrôle disait `7 components would change`
-3. **Quick Deploy** **(3)** : **Used**. Le job de merge n'est pas parti de rien. Il a déployé la
-   validation que le contrôle de Pull Request avait déjà faite, c'est pourquoi la ligne **Apex
-   tests** indique **Already run during the validation**, et pourquoi il a pris deux minutes
-   plutôt que cinq
+2. **Metadata** **(2)**, sous la même forme que ce que le contrôle annonçait, avec en plus la
+   façon dont il a été déployé : **✅ Full Quick Deploy: 7 components changed (1 created, 6
+   updated)** là où le contrôle disait `7 components would change`. *Full*, parce que ce projet
+   envoie le package entier à chaque fois. *Quick Deploy*, parce que le job de merge n'est pas
+   parti de rien : il a déployé la validation que le contrôle de Pull Request avait déjà faite,
+   et c'est pourquoi il a pris deux minutes plutôt que cinq
+3. **Apex tests** **(3)** : **Already run during the validation**. Le Quick Deploy a repris
+   l'exécution des tests du contrôle, donc aucun test n'a tourné à nouveau
 
 Ouvrez ensuite `helios-integration` depuis **Orgs Manager** et regardez une installation.
 

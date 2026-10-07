@@ -5,7 +5,7 @@ description: "Protégez ce que l'UAT garde pour elle avec package-no-overwrite, 
 level: 3
 lab: 5
 lang: fr
-source_rev: "9c652820abe61fac27fa86bac9eba269af742274"
+source_rev: "ee3029d22ba45d5b0cbdb2c50c30d3e3aa93a291"
 screenshots:
   - annotated/vscode/devops-pipeline-level3--create-promotion
   - annotated/vscode/pipeline-branch-modal-level3--what-it-carries
@@ -168,7 +168,8 @@ atteint la production.
 
 Mergez-la avec **Merge pull request**, jamais avec un squash : une promotion transporte chaque commit
 des stories qu'elle promeut, et la promotion suivante, le retrofit et les notes de version ont tous
-besoin de les retrouver un par un ([Lab 1.6](../level-1-contributor-basics/1-6-pull-request-deployment-check-and-merge.md)).
+besoin de les retrouver un par un ([Lab 1.6](../level-1-contributor-basics/1-6-pull-request-deployment-check-and-merge.md)). Le commentaire vert du contrôle dit la même chose sur sa ligne
+**How to merge** : **use a merge commit, never squash**.
 
 ### 4. Lire les deployment actions qu'elle transporte
 

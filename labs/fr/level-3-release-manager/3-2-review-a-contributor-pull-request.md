@@ -5,7 +5,7 @@ description: "Relisez la Pull Request Salesforce d'une collègue en release mana
 level: 3
 lab: 2
 lang: fr
-source_rev: "9c652820abe61fac27fa86bac9eba269af742274"
+source_rev: "ee3029d22ba45d5b0cbdb2c50c30d3e3aa93a291"
 screenshots:
   - annotated/web/github-pr-files
   - annotated/vscode/welcome-custom-menu-3
@@ -72,10 +72,12 @@ Lisez le commentaire sfdx-hardis, de haut en bas. Quatre choses, dans cet ordre 
    correspondent pas à la taille de la story, c'est votre signal pour aller lire le diff
 3. **Qu'est-ce que ça supprime ?** Un compteur `deleted` sur cette même ligne, affiché seulement
    quand quelque chose disparaît, et la colonne **🗑️ Deleted** du tableau, qui dit quel genre de
-   composant disparaît : un champ, une classe, une présentation de page. Les Flows ont droit à
-   davantage : une ligne **Flows** qui nomme chaque Flow modifié, avec un commentaire de diff par
-   Flow publié en dessous, une ligne pour un Flow dont seul le statut change (`status only, Active
-   → Obsolete`), et un tableau **Flow deletion** quand des versions sont retirées. Le commentaire
+   composant disparaît : un champ, une classe, une présentation de page. Les Flows y sont comptés
+   comme tout autre composant, et ont droit à une chose de plus : un commentaire de diff à eux,
+   **🔀 Flow** suivi de son libellé, publié en dessous pour chaque Flow modifié. Un Flow dont seul
+   le statut change, activé ou désactivé, n'a pas de commentaire de diff et n'est nommé nulle part :
+   lisez le diff pour ceux-là. Une section **Flow deletion** apparaît quand des versions sont
+   retirées. Le commentaire
    ne nomme aucun autre composant supprimé : la liste, une ligne par composant, est
    `xls/deployment-components.xlsx` dans l'artefact **sfdx-hardis reports** du contrôle
    (**Summary** de son run, puis **Artifacts**)
@@ -187,8 +189,8 @@ puis a publié le commentaire via l'API GitHub avec le token que le workflow a d
 la Pull Request ne se remplit pas de vingt commentaires de robot. Il se retrouve grâce à un marqueur
 caché porteur d'une clé de message, et il y a en fait **deux** commentaires de ce genre, mis à jour
 indépendamment : un pour le job de contrôle, un pour le job de merge. Un troisième rassemble les
-deployment actions, et les Flows en ont un chacun, sauf un Flow dont seul le statut change, que la
-ligne **Flows** nomme à la place. Un commentaire est limité à 50 000 caractères sur GitHub : au-delà,
+deployment actions, et les Flows en ont un chacun, sauf un Flow dont seul le statut change, qui n'en
+a aucun. Un commentaire est limité à 50 000 caractères sur GitHub : au-delà,
 il dit ce qu'il a raccourci.
 
 Les compteurs qu'il affiche viennent de ce que Salesforce a rapporté sur le déploiement, pas du diff

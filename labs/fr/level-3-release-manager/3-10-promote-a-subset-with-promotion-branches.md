@@ -5,7 +5,7 @@ description: "Transportez trois User Stories approuvées sur cinq de uat vers pr
 level: 3
 lab: 10
 lang: fr
-source_rev: "9c652820abe61fac27fa86bac9eba269af742274"
+source_rev: "ee3029d22ba45d5b0cbdb2c50c30d3e3aa93a291"
 screenshots:
   - annotated/vscode/welcome-custom-menu-3
   - annotated/vscode/pipeline-config-danger--promotion-branches
@@ -576,7 +576,7 @@ utilisable par la personne qui lira ça dans six mois :
 
 Mergez ensuite avec **Merge pull request**. Jamais de squash : les commits cherry-pickés et leurs
 lignes de traçabilité sont ce que la prochaine promotion, le retrofit et les notes de version lisent
-tous.
+tous. La ligne **How to merge** du commentaire vert du contrôle le dit aussi.
 
 L'exécution **Process Deployment (sfdx-hardis)** démarre sur `preprod`. Quand elle est verte, ouvrez
 `helios-preprod` et vérifiez les deux moitiés de ce que vous avez fait :
@@ -647,7 +647,8 @@ Les deux fichiers atterrissent sous **Staged Changes** avec le message `Merge re
 'origin/preprod'` déjà écrit. **Commit**, puis **Save / Publish User Story** comme au [Lab 3.7](3-7-hotfix-and-retrofit.md)
 étape 9, et ouvrez la Pull Request vers `integration`, intitulée `Retrofit: the promotion of US-057,
 US-059 and US-061 back down into integration`. Son onglet **Files changed** est vide, et c'est
-normal : lisez le bloc ci-dessous. Attendez son contrôle, et mergez-la avec **Merge pull request**.
+normal : lisez le bloc ci-dessous. Attendez son contrôle, et mergez-la avec **Merge pull request**,
+comme le demande la ligne **How to merge** de son commentaire.
 
 <details markdown="1"><summary>Sous le capot : une Pull Request qui ne change aucun fichier, et pourquoi elle compte quand même</summary>
 

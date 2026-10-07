@@ -5,7 +5,7 @@ description: "Modifiez un flow Salesforce existant, puis lisez correctement un c
 level: 2
 lab: 2
 lang: fr
-source_rev: "9c652820abe61fac27fa86bac9eba269af742274"
+source_rev: "ee3029d22ba45d5b0cbdb2c50c30d3e3aa93a291"
 screenshots:
   - annotated/vscode/package-xml-filtered
   - annotated/vscode/editor-field-file
@@ -176,7 +176,9 @@ Installation_Crew_Warning field integrity exception: unknown (The field "Crew_Wa
 for the object "Installation__c" doesn't exist.)
 ```
 
-La ligne **Flows** de son tableau **(2)** nomme votre flow, et renvoie à un deuxième commentaire à
+Plus bas, la ligne repliée **📋 1 component failed, ... would change in the org** **(2)** ouvre un
+tableau des composants, par type, avec votre flow dans son groupe **❌ Failed**. Un flow est une
+métadonnée comme les autres dans ce commentaire. Ce qu'il a en plus, c'est un deuxième commentaire à
 lui, publié juste en dessous : **🔀 Flow Installation Crew Warning**, le diff visuel du flow. Il
 dessine le flow, et colore ce que votre story a modifié. Le nouvel élément **Mark Warning Sent** est
 en vert **(1)**. Au-dessus du schéma, un tableau **properties changed** donne chaque propriété

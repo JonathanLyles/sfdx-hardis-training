@@ -3,6 +3,10 @@
 What changed in the course, for learners and trainers. The course has no versions: each section is
 a day, newest first, and a change goes under the date of the day it is made.
 
+## 2026-10-08
+
+- The labs follow the latest Pull Request comments: no Flows row, the deployment mode in the Metadata row, and a How to merge line on a green check.
+
 ## 2026-10-07
 
 - The labs read the new sfdx-hardis Pull Request comments: a verdict on top, a table of checks, then only what needs you; their screenshots will be taken again once the course runs that version.

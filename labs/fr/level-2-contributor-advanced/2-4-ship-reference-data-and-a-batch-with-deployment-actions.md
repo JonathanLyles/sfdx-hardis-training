@@ -5,7 +5,7 @@ description: "Un déploiement vert n'est pas une fonctionnalité qui marche. Liv
 level: 2
 lab: 4
 lang: fr
-source_rev: "9c652820abe61fac27fa86bac9eba269af742274"
+source_rev: "ee3029d22ba45d5b0cbdb2c50c30d3e3aa93a291"
 screenshots:
   - annotated/vscode/sidebar-commands-custom-menu-2--lab-records
   - annotated/salesforce/crew-capacity-records
@@ -326,8 +326,8 @@ marquer, et sfdx-hardis publie un commentaire **Deployment Actions** sur la Pull
 
 Sous sa bannière, un verdict indique **In integration: 👋 1 to do by hand**, puis :
 
-- **Needs you** **(1)** : votre étape de délivrabilité, marquée 👋, avec une case à cocher, pour
-  `integration`
+- **Needs you** **(1)** : votre étape de délivrabilité, avec une case à cocher, marquée 👋 et
+  suivie de *(org branch: integration)*
 - **Status by org** **(2)** : une ligne par action, avec son moment. L'étape de délivrabilité,
   **pre-deploy**, est **to do by hand** ; l'import et la planification, **post-deploy**, indiquent
   **not run in this org branch yet**, parce que le contrôle s'est arrêté avant eux, et qu'un
