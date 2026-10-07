@@ -155,9 +155,9 @@ the same gate, on the real org, taking two minutes.
 ### 6. Confirm it is live
 
 Merge, and watch the **Process Deployment (sfdx-hardis)** run on `main`. When it finishes, the
-sfdx-hardis comment says what reached the org: the banner **(1)**, the counts line **(2)**, and the
-Quick Deploy line **(3)**: the merge released the validation its check had already run on
-production, rather than deploying again. The picture is the comment of an earlier deployment, so
+sfdx-hardis comment says what reached the org: the verdict **✅ Deployed to `main`** **(1)**, the
+**Metadata** row **(2)**, and the **Quick Deploy** row **(3)**, **Used**: the merge deployed the
+validation its check had already run on production, rather than deploying again. The picture is the comment of an earlier deployment, so
 your counts are different.
 
 ![The sfdx-hardis comment on a merged Pull Request](../../_assets/annotated/web/github-pr-deployed.png)

@@ -105,10 +105,10 @@ that only apply to production:
 
 | Question                     | Where to look                                                                                                               |
 |------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| **Does it delete anything?** | The `deleted` figure in the counts line. A deletion in production is permanent and takes data with it                       |
+| **Does it delete anything?** | The `deleted` figure in the **Metadata** row, shown only when something goes. A deletion in production is permanent and takes data with it |
 | **How long will it take?**   | The check duration is a reasonable estimate. If it is 40 minutes, that is 40 minutes during which the org is being modified |
 
-If that figure is not zero and you were not expecting it, **stop**. The comment will not tell you
+If that figure is there and you were not expecting it, **stop**. The comment will not tell you
 what is going: `manifest/destructiveChanges.xml` and the diff will. Find out what it is and who
 intended it. That is not being careful, that is the job.
 

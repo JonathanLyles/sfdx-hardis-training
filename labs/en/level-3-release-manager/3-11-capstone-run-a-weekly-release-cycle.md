@@ -76,13 +76,13 @@ Verify in `helios-uat` that the stories are usable, not only deployed.
 ### Thursday: release to production
 
 Promote `uat` into `preprod` first, and check `helios-preprod` behaves. Then create the release, the Pull
-Request from `preprod` into `main`, titled `Release ...`. Read the counts line in the sfdx-hardis comment and stop if anything is being
+Request from `preprod` into `main`, titled `Release ...`. Read the **Metadata** row of the sfdx-hardis comment and stop if anything is being
 deleted that you were not expecting. Merge, watch, verify, do the manual steps.
 
 Everything [Lab 3.7](3-7-hotfix-and-retrofit.md) put in at `preprod` is already in `main`, so this release should not be moving
-it again. Read the counts line with that in mind: what goes out this week is Romain's help text,
+it again. Read the **Metadata** row with that in mind: what goes out this week is Romain's help text,
 the retrofits travelling up from `integration`, and US-058 and US-060, which have been waiting in
-`uat` since [Lab 3.10](3-10-promote-a-subset-with-promotion-branches.md). `deleted: 0` is still the number to stop on.
+`uat` since [Lab 3.10](3-10-promote-a-subset-with-promotion-branches.md). A `deleted` count in that row is still the thing to stop on.
 
 **That promotion is also what ends the exception.** US-057, US-059 and US-061 went to `preprod` on
 their own last week; this one carries US-058 and US-060 the ordinary way, and `uat` and `preprod`

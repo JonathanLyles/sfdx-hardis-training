@@ -164,19 +164,22 @@ them one by one ([Lab 1.6](../level-1-contributor-basics/1-6-pull-request-deploy
 
 ### 4. Read the deployment actions it carries
 
-Once the check runs, the sfdx-hardis comment gains two sections, **Pre-deployment Actions Results**
-and **Post-deployment Actions Results**. What a promotion adds on top is the paragraph naming the
-scope **(1)**: every Pull Request it carries, each one a link.
+Once the check runs, the sfdx-hardis comment counts the actions in the **Deployment actions** row of
+its table, and lists each one in the folded **🛠️ Deployment actions of this job**. What a promotion
+adds on top is its scope **(1)**: the folded **ℹ️ Where the deployment actions and test classes come
+from** says they are collected from the content of this Pull Request, and the folded **🎫 ...
+tickets · ... Pull Requests** lists every Pull Request it carries, each one a link.
 
 ![The deployment actions collected on the promotion Pull Request](../../_assets/annotated/web/github-pr-promotion-actions.png)
 
-Every action any contributor declared on any of the merged stories is collected into one table, with
-its label, its type, its status and a link back to the Pull Request it came from. Anything needing a
-human gets a **checklist above the table**, headed *Manual Actions to perform before proceeding with
-deployment* or *after deployment*. The two checklists land on different jobs: the check job carries
-the before one **(2)**, so you can act on it while deciding, and the merge job carries the after
-one. The post-deployment actions **(3)** read **skipped** on the check: a check changes nothing in
-the org, so they wait for the merge.
+Every action any contributor declared on any of the merged stories is collected into that one
+table, with its label, its moment, its result with the reason in plain words, and a link back to the
+Pull Request it came from. Anything needing a human gets a **checklist** of its own, above the
+folded sections, headed **👋 To do by hand in `uat` before the deployment** or **after the
+deployment**. The two checklists land on different jobs: the check job carries the before one
+**(2)**, so you can act on it while deciding, and the merge job carries the after one. The
+post-deployment actions **(3)** are counted **🕒 after the merge** on the check, with the reason
+**Runs after the merge only**: a check changes nothing in the org, so they wait for the merge.
 
 **Read it before merging.** Two things to look for:
 
@@ -219,9 +222,9 @@ Type RemoteSiteSetting: 1 item(s) skipped because they already exist in the targ
 **Final package.xml to deploy** printed right after it has one item fewer.
 
 The Pull Request says it too, without the log: the comment of the check, and the one this
-deployment writes, carry a **Protected metadata (package-no-overwrite.xml)** section. Open its
-table, **Protected components per metadata type**: it counts **1** in the **Not overwritten** column
-of the **RemoteSiteSetting** row. Read it on the
+deployment writes, carry a folded **🛡️ Protected by `manifest/package-no-overwrite.xml` (1)**
+section. Open it: its table, **Protected components per metadata type**, counts **1** in the
+**🛡️ Not overwritten** column of the **RemoteSiteSetting** row. Read it on the
 check, before merging: a component you expected to deploy that shows up there is one the list
 protects by mistake.
 

@@ -381,7 +381,8 @@ merge. The same text sits in `hardis-report/promotion-conflicts-prompt-<date>.md
 the command panel offered you. Step 6 uses one or the other.
 
 Now look at the **Checks** of the Pull Request. The **Check deployment** run is red, and the
-sfdx-hardis comment says why, in one paragraph:
+sfdx-hardis comment says why: its verdict reads **❌ Cannot merge into `preprod`: Git conflict
+markers in the promotion branch**, and one paragraph under it names the files:
 
 > ❌ Nothing was deployed: the promotion branch `promotion/uat/preprod/2026-09-24-0930` still
 > contains git conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) in 2 file(s). Solve them on the
@@ -501,12 +502,15 @@ Helios_Delivery_Manager (#63): preprod had no Warranty Years grant; the story ad
 
 **Commit**, then **Sync Changes** to push.
 
-Whichever route you took, the push starts the check again. It is green this time, and the first
-line of the sfdx-hardis comment is the one from an ordinary promotion:
+Whichever route you took, the push starts the check again. It is green this time. Open the folded
+**ℹ️ Where the deployment actions and test classes come from** at the bottom of the sfdx-hardis
+comment: its first line is the one from an ordinary promotion,
 
 > ℹ️ `promotion/uat/preprod/2026-09-24-0930` is a promotion branch carrying 3 Pull Request(s)
-> declared in its description: #62, #63, #65. Deployment actions, Apex test classes and custom
-> behaviors of those Pull Requests are processed.
+> declared in its description.
+
+followed by what the job collected from them. The folded **🎫** section next to it lists the three
+Pull Requests, #62, #63 and #65.
 
 If that line is missing, or says none of the declared Pull Requests could be used, **stop and fix it
 before merging**. It means the job did not read the declaration, and the deployment about to run is
