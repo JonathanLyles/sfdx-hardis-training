@@ -184,7 +184,7 @@ machine before it opens anything, so you find out here rather than on the issue.
 !!! tip "If the course helped you"
     [hardisgroupcom/vscode-sfdx-hardis](https://github.com/hardisgroupcom/vscode-sfdx-hardis) is the
     extension every click of this course went through. A star is how an open source project stays
-    visible: open its page and click **Star** **(1)**, at the top right. Give it a star if you liked this
+    visible: open its page and click **Star** **(1)**, on the right of the repository name. Give it a star if you liked this
     course!
 
     ![The Star button of the vscode-sfdx-hardis repository on GitHub](../../_assets/annotated/web/github-star-vscode-sfdx-hardis.png)
