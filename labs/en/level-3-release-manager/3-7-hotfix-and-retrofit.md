@@ -9,7 +9,7 @@ source_rev: ""
 screenshots:
   - annotated/salesforce/validation-rule
   - annotated/vscode/welcome-custom-menu-3
-  - annotated/web/github-pr-files
+  - annotated/web/github-pr-files-hotfix
   - annotated/web/github-pr-merge
   - annotated/vscode/devops-pipeline-level3--release-to-prod
   - annotated/web/github-pr-deployed
@@ -111,7 +111,7 @@ was cut from `preprod`, which is what **New User Story** does when the target is
 Open the Pull Request, **Files changed** **(1)**. One file, the validation rule **(2)**, and the
 change is the added line **(3)**:
 
-![The Files changed tab of a Pull Request](../../_assets/annotated/web/github-pr-files.png)
+![The Files changed tab of the hotfix Pull Request, one validation rule and one added line](../../_assets/annotated/web/github-pr-files-hotfix.png)
 
 ```
   NOT(ISPICKVAL(Status__c, "Cancelled"))
