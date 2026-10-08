@@ -132,7 +132,7 @@ second column*. Elle ne dit rien d'un champ qui s'en va. C'est l'écart auquel s
 diff dit une chose, la description une autre, et une seule des deux est ce qui sera déployé.
 
 **Rien dans la pipeline ne peut attraper cela.** Une présentation de page avec un champ de moins est
-un déploiement valide, la ligne **Metadata** dit `1 updated`, et seul quelqu'un qui connaît l'org
+un déploiement valide, la ligne **Metadata** compte la présentation comme un composant `updated` de plus, et seul quelqu'un qui connaît l'org
 peut voir ce qui manque.
 
 ### 5. Demander la correction, sur la ligne

@@ -486,8 +486,9 @@ commitez-les sous `Configure the pipeline up to production`, exactement comme vo
 métadonnée au [Lab 1.5](../level-1-contributor-basics/1-5-retrieve-commit-and-publish-your-changes.md).
 
 **Publiez.** Dans le panneau **DevOps Pipeline**, cliquez sur la carte **Save / Publish** **(1)**,
-celle par laquelle chaque story est passée depuis le [Lab 1.5](../level-1-contributor-basics/1-5-retrieve-commit-and-publish-your-changes.md). Elle demande la branche cible :
-`integration`. Elle commite ce qui reste, lance le nettoyage, et pousse la branche.
+celle par laquelle chaque story est passée depuis le [Lab 1.5](../level-1-contributor-basics/1-5-retrieve-commit-and-publish-your-changes.md). Elle ne demande pas la branche cible :
+New User Story a enregistré `integration` à l'étape 4. Répondez que votre commit est prêt et qu'elle
+peut pousser : elle commite ce qui reste, lance le nettoyage, et pousse la branche.
 
 ![La carte Save / Publish du panneau DevOps Pipeline](../../_assets/annotated/vscode/pipeline-cards--save-publish.png)
 
