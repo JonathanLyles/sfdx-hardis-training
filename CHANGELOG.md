@@ -8,6 +8,10 @@ a day, newest first, and a change goes under the date of the day it is made.
 - The labs follow the latest Pull Request comments: no Flows row, the deployment mode in the Metadata row, and a How to merge line on a green check.
 - Every VS Code screenshot taken again on the current extension, and the Level 1 GitHub screenshots taken from a real walk with the new Pull Request comments.
 - Lab 1.4: the Salesforce Setup screenshots show the new Setup look, and the record picture shows an installation with two pallets.
+- Level 2 GitHub and Salesforce screenshots taken from a real walk with the new Pull Request comments: the failed check and the Flow diff of Lab 2.2, the Deployment Actions comment of Lab 2.4, Flow Builder in Labs 2.2 and 2.7, the Crew Capacity list of Lab 2.4.
+- Lab 2.2: the Add Element menu of Flow Builder gained two rows, and the pill is back on Update Triggering Record.
+- Lab 2.4: Create my lab records picks the lab and the org on its own, and the lab no longer asks you to pick them.
+- Capstones: the Star screenshots show the button again, now on the right of the repository name.
 
 ## 2026-10-07
 
