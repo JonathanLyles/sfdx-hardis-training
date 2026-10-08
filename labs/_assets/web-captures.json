@@ -45,7 +45,9 @@
       "url": "https://code.visualstudio.com/download",
       "width": 1440,
       "height": 820,
-      "click": ["button:has-text('Reject')"],
+      "click": [
+        "button:has-text('Reject')"
+      ],
       "settle": 2000,
       "hideText": [
         {
@@ -81,7 +83,7 @@
     },
     {
       "name": "github-pr-comment",
-      "url": "https://github.com/nvuillam/sfdx-hardis-training/pull/43",
+      "url": "https://github.com/nvuillam/sfdx-hardis-training/pull/46",
       "width": 1440,
       "height": 1800,
       "settle": 5000,
@@ -103,7 +105,7 @@
     },
     {
       "name": "github-pr-checks",
-      "url": "https://github.com/nvuillam/sfdx-hardis-training/pull/1/checks",
+      "url": "https://github.com/nvuillam/sfdx-hardis-training/pull/46/checks",
       "width": 1440,
       "height": 900,
       "settle": 5000,
@@ -122,16 +124,23 @@
     },
     {
       "name": "github-pr-merge",
-      "url": "https://github.com/nvuillam/sfdx-hardis-training/pull/1",
+      "url": "https://github.com/nvuillam/sfdx-hardis-training/pull/46",
       "width": 1440,
       "height": 1000,
       "settle": 4000,
-      "scrollTo": "text=Merge pull request",
-      "clip": {
-        "x": 150,
-        "y": 295,
-        "width": 850,
-        "height": 250
+      "evaluate": [
+        "(() => { const main = [...document.querySelectorAll('button')].find((b) => /^(Merge pull request|Squash and merge|Rebase and merge)$/.test(b.innerText.trim())); if (!main) return; main.scrollIntoView({ block: 'center' }); const caret = main.parentElement.parentElement.querySelector(\"button[aria-haspopup='true']\"); if (caret) caret.click(); })()",
+        "(() => { const item = [...document.querySelectorAll(\"[role='menu'] [role^='menuitem']\")].find((i) => i.innerText.trim().startsWith('Create a merge commit')); if (item) item.click(); })()",
+        "(() => { if (document.activeElement) document.activeElement.blur(); window.scrollBy(0, 1); })()"
+      ],
+      "clipAround": {
+        "selector": "button:has-text('Merge pull request')",
+        "padding": {
+          "top": 190,
+          "right": 645,
+          "bottom": 24,
+          "left": 30
+        }
       },
       "hideText": [
         {
@@ -139,7 +148,7 @@
           "max": 25
         }
       ],
-      "_comment": "Lab 1.6 step 4: the merge box of an open Pull Request whose checks are green. Point it at one that is still open when retaking it: a merged Pull Request has no button to show."
+      "_comment": "Lab 1.6 step 4: the merge box of an open Pull Request whose checks are green, with the button a learner's first Pull Request shows. GitHub remembers the last merge method, so the capture picks Create a merge commit in the menu first (nothing is merged). Point it at one that is still open when retaking it: a merged Pull Request has no button to show."
     },
     {
       "name": "gh-cli-download",
@@ -177,7 +186,7 @@
     },
     {
       "name": "github-pr-deployed",
-      "url": "https://github.com/nvuillam/sfdx-hardis-training/pull/43",
+      "url": "https://github.com/nvuillam/sfdx-hardis-training/pull/46",
       "width": 1440,
       "height": 1800,
       "settle": 5000,
@@ -230,18 +239,27 @@
       "width": 1440,
       "height": 900,
       "settle": 2000,
-      "clickFirst": ["button:has-text('New branch')"],
-      "fill": [["div[role='dialog'] input[type='text']", "preprod"]],
+      "clickFirst": [
+        "button:has-text('New branch')"
+      ],
+      "fill": [
+        [
+          "div[role='dialog'] input[type='text']",
+          "preprod"
+        ]
+      ],
       "selector": "div[role='dialog']"
     },
     {
       "name": "github-pr-merge-squash",
-      "_comment": "Lab 1.6 step 4: the merge method menu of an open Pull Request, opened from the arrow next to the merge button. Any open Pull Request of the fork will do: the menu is the same.",
-      "url": "https://github.com/nvuillam/sfdx-hardis-training/pull/1",
+      "_comment": "Lab 1.6 step 4: the merge method menu of an open Pull Request, opened from the arrow next to the merge button. Any open Pull Request of the fork will do: the menu is the same. The capture picks Create a merge commit first, which is what a learner's first Pull Request has ticked, then opens the menu again (nothing is merged).",
+      "url": "https://github.com/nvuillam/sfdx-hardis-training/pull/46",
       "width": 1440,
       "height": 1000,
       "settle": 2500,
       "evaluate": [
+        "(() => { const main = [...document.querySelectorAll('button')].find((b) => /^(Merge pull request|Squash and merge|Rebase and merge)$/.test(b.innerText.trim())); if (!main) return; main.scrollIntoView({ block: 'center' }); const caret = main.parentElement.parentElement.querySelector(\"button[aria-haspopup='true']\"); if (caret) caret.click(); })()",
+        "(() => { const item = [...document.querySelectorAll(\"[role='menu'] [role^='menuitem']\")].find((i) => i.innerText.trim().startsWith('Create a merge commit')); if (item) item.click(); })()",
         "(() => { const main = [...document.querySelectorAll('button')].find((b) => /^(Merge pull request|Squash and merge|Rebase and merge)$/.test(b.innerText.trim())); if (!main) return; main.scrollIntoView({ block: 'center' }); const caret = main.parentElement.parentElement.querySelector(\"button[aria-haspopup='true']\"); if (caret) caret.click(); })()"
       ],
       "clipAround": {
@@ -276,8 +294,13 @@
           "max": 300
         }
       ],
-      "hide": ["img.avatar", "img[src*='avatars.githubusercontent.com']"],
-      "clickFirst": ["summary:has-text('Run workflow')"],
+      "hide": [
+        "img.avatar",
+        "img[src*='avatars.githubusercontent.com']"
+      ],
+      "clickFirst": [
+        "summary:has-text('Run workflow')"
+      ],
       "clipAround": {
         "selector": "details[open]",
         "padding": {
@@ -358,7 +381,10 @@
       "width": 1440,
       "height": 1100,
       "settle": 3000,
-      "hide": ["img.avatar", "img[src*='avatars.githubusercontent.com']"],
+      "hide": [
+        "img.avatar",
+        "img[src*='avatars.githubusercontent.com']"
+      ],
       "clip": {
         "x": 0,
         "y": 58,
@@ -373,7 +399,10 @@
       "width": 1440,
       "height": 1000,
       "settle": 3000,
-      "hide": ["img.avatar", "img[src*='avatars.githubusercontent.com']"],
+      "hide": [
+        "img.avatar",
+        "img[src*='avatars.githubusercontent.com']"
+      ],
       "evaluate": [
         "(() => { const set = (el, v) => { const proto = el.tagName === 'TEXTAREA' ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype; Object.getOwnPropertyDescriptor(proto, 'value').set.call(el, v); el.dispatchEvent(new Event('input', { bubbles: true })); }; const name = document.querySelector('#secret_name, input[name=secret_name]'); const value = document.querySelector('#secret_value, textarea[name=secret_value]'); if (name) set(name, 'SFDX_CLIENT_ID_PREPROD'); if (value) set(value, '3MVG9EXAMPLE.the.consumer.key.the.panel.printed'); })()"
       ],
@@ -391,7 +420,10 @@
       "width": 1440,
       "height": 1000,
       "settle": 3000,
-      "hide": ["img.avatar", "img[src*='avatars.githubusercontent.com']"],
+      "hide": [
+        "img.avatar",
+        "img[src*='avatars.githubusercontent.com']"
+      ],
       "evaluate": [
         "(() => { const set = (el, v) => { const proto = el.tagName === 'TEXTAREA' ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype; Object.getOwnPropertyDescriptor(proto, 'value').set.call(el, v); el.dispatchEvent(new Event('input', { bubbles: true })); }; const name = document.querySelector('#secret_name, input[name=secret_name]'); const value = document.querySelector('#secret_value, textarea[name=secret_value]'); if (name) set(name, 'SFDX_CLIENT_KEY_PREPROD'); if (value) set(value, '4f9c2a7e1b8d3f6a0c5e9b2d7a1f4c8e'); })()"
       ],
