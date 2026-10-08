@@ -99,8 +99,8 @@ Puis les enregistrements. Helios prend en charge 12 combinaisons, trois types d'
 types de toiture, et chacune a besoin d'un enregistrement Crew Capacity qui dit combien de panneaux
 par jour cette équipe pose sur cette toiture. Saisir douze enregistrements n'apprend rien de ce dont
 parle ce lab, alors le menu Training les crée : **Training: Level 2** **(1)** > **Create my lab
-records** **(2)**, choisissez **Lab 2.4 - the 12 Crew Capacity records**, puis **helios-dev**, et
-répondez **Yes** à **Create them?**.
+records** **(2)**. Le panneau prend de lui-même **Lab 2.4 - the 12 Crew Capacity records** et
+**helios-dev**, le seul lab et la seule org qu'il propose ici : répondez **Yes** à **Create them?**.
 
 ![Le menu Training du Niveau 2, avec Create my lab records](../../_assets/annotated/vscode/sidebar-commands-custom-menu-2--lab-records.png)
 
