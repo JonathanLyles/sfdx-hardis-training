@@ -9,7 +9,7 @@ source_rev: "ee3029d22ba45d5b0cbdb2c50c30d3e3aa93a291"
 screenshots:
   - annotated/salesforce/validation-rule
   - annotated/vscode/welcome-custom-menu-3
-  - annotated/web/github-pr-files
+  - annotated/web/github-pr-files-hotfix
   - annotated/web/github-pr-merge
   - annotated/vscode/devops-pipeline-level3--release-to-prod
   - annotated/web/github-pr-deployed
@@ -115,7 +115,7 @@ Cela ouvre sa Pull Request de `fix/US-045-installation-date-hotfix` vers **`prep
 Ouvrez la Pull Request, **Files changed** **(1)**. Un fichier, la règle de validation **(2)**, et la
 modification est la ligne ajoutée **(3)** :
 
-![L'onglet Files changed d'une Pull Request](../../_assets/annotated/web/github-pr-files.png)
+![L'onglet Files changed de la Pull Request du hotfix, une règle de validation et une ligne ajoutée](../../_assets/annotated/web/github-pr-files-hotfix.png)
 
 ```
   NOT(ISPICKVAL(Status__c, "Cancelled"))
