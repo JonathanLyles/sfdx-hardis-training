@@ -191,8 +191,8 @@ l'issue.
 !!! tip "Si ce cours vous a servi"
     [hardisgroupcom/vscode-sfdx-hardis](https://github.com/hardisgroupcom/vscode-sfdx-hardis) est
     l'extension par laquelle est passé chaque clic de ce cours. Une étoile est ce qui permet à un
-    projet open source de rester visible : ouvrez sa page et cliquez sur **Star** **(1)**, en haut à
-    droite. Donnez une étoile si vous avez aimé ce cours !
+    projet open source de rester visible : ouvrez sa page et cliquez sur **Star** **(1)**, à droite du
+    nom du repository. Donnez une étoile si vous avez aimé ce cours !
 
     ![Le bouton Star du repository vscode-sfdx-hardis sur GitHub](../../_assets/annotated/web/github-star-vscode-sfdx-hardis.png)
 
