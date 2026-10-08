@@ -2494,6 +2494,37 @@
         }
       ]
     },
+    "web/github-pr-files-hotfix.png": {
+      "pills": [
+        {
+          "n": 1,
+          "x": 30.8,
+          "y": 18.3,
+          "w": 11,
+          "h": 5.4,
+          "px": 44.2,
+          "py": 22
+        },
+        {
+          "n": 2,
+          "x": 4,
+          "y": 46.4,
+          "w": 25,
+          "h": 3.8,
+          "px": 31,
+          "py": 50
+        },
+        {
+          "n": 3,
+          "x": 39.4,
+          "y": 61,
+          "w": 57.4,
+          "h": 3.4,
+          "px": 97.6,
+          "py": 61.7
+        }
+      ]
+    },
     "vscode/pipeline-config-deployment.png#delta": {
       "pills": [
         {
