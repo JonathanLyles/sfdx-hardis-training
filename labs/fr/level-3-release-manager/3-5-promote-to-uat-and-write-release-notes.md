@@ -386,6 +386,16 @@ Documentation de la commande : [hardis:doc:release-notes](https://sfdx-hardis.cl
 
 ## En cas de problème
 
+**Le check de la promotion est vert tout de suite, sans étape de délivrabilité à faire.**
+Vous avez commencé le Niveau 3 avec **Reset this level**. Il met les stories du Niveau 2 dans
+`integration` en un seul commit qu'aucune Pull Request de votre fork n'a fait, et sfdx-hardis
+collecte les deployment actions dans les Pull Requests qu'une promotion transporte. Les actions du
+Niveau 2, l'étape de délivrabilité, les données de capacité des équipes et leur job de nuit, le
+remplissage de la taille d'équipe et les modèles de passation, ne voyagent avec aucune d'elles :
+aucune promotion ne les lance donc dans `uat` ni après. Les étapes 4, 5 et 7 montrent alors moins
+d'actions que ce lab ne le décrit, et votre pipeline n'a rien de faux. Le chemin qui les montre
+toutes est le Niveau 2 enchaîné directement avec le Niveau 3.
+
 **Le job de déploiement vers uat est rouge sur « Put the delivery managers in the Crew Leads group ».**
 Votre fork date d'avant le 2026-10-05, quand le correctif de Mariia au [Lab 3.3](3-3-deploy-to-integration-and-read-the-log.md) ne livrait pas encore le
 groupe public Crew Leads : `helios-uat` n'en a pas, et sa première action le cherche. Les
