@@ -6,6 +6,8 @@ a day, newest first, and a change goes under the date of the day it is made.
 ## 2026-10-08
 
 - The labs follow the latest Pull Request comments: no Flows row, the deployment mode in the Metadata row, and a How to merge line on a green check.
+- Every VS Code screenshot taken again on the current extension, and the Level 1 GitHub screenshots taken from a real walk with the new Pull Request comments.
+- Lab 1.4: the Salesforce Setup screenshots show the new Setup look, and the record picture shows an installation with two pallets.
 
 ## 2026-10-07
 
