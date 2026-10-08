@@ -204,6 +204,8 @@ is where it goes.
 
 The window lists the five stories newest first: US-061, US-060, US-059, US-057, US-058. Tick the
 **first, the third and the fourth**, US-061, US-059 and US-057, and leave US-060 and US-058 alone.
+The Pull Requests under them, the retrofit of [Lab 3.7](3-7-hotfix-and-retrofit.md) and the configuration of [Lab 3.8](3-8-monitor-your-production-org.md),
+are older: leave them unticked too.
 The button label counts what you ticked: **Create promotion from uat (3 selected) (Beta)**. Click
 it.
 
@@ -384,7 +386,7 @@ Now look at the **Checks** of the Pull Request. The **Check deployment** run is 
 sfdx-hardis comment says why: its verdict reads **❌ Cannot merge into `preprod`: Git conflict
 markers in the promotion branch**, and one paragraph under it names the files:
 
-> ❌ Nothing was deployed: the promotion branch `promotion/uat/preprod/2026-09-24-0930` still
+> Nothing was deployed: the promotion branch `promotion/uat/preprod/2026-09-24-0930` still
 > contains git conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) in 2 file(s). Solve them on the
 > branch, by hand or with the prompt for a coding agent embedded in this Pull Request description
 > (also saved in `hardis-report/`), then commit and push: the job runs again from there.
