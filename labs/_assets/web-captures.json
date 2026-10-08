@@ -192,7 +192,7 @@
     },
     {
       "name": "github-pr-files",
-      "url": "https://github.com/nvuillam/sfdx-hardis-training/pull/17/files",
+      "url": "https://github.com/nvuillam/sfdx-hardis-training/pull/64/files",
       "width": 1440,
       "height": 1200,
       "settle": 6000,
@@ -219,7 +219,7 @@
     {
       "name": "github-branch-rule",
       "_comment": "The integration rule that Set up my training environment creates. Its id changes whenever the rule is created again: read it with gh api graphql, branchProtectionRules { databaseId pattern }.",
-      "url": "https://github.com/nvuillam/sfdx-hardis-training/settings/branch_protection_rules/84223371",
+      "url": "https://github.com/nvuillam/sfdx-hardis-training/settings/branch_protection_rules/84451641",
       "width": 1440,
       "height": 2400,
       "settle": 3000,
@@ -489,7 +489,7 @@
     {
       "name": "github-pr-deployment-actions-failed",
       "_comment": "Lab 3.3 step 10: the Deployment Actions comment of US-062 right after its deployment, the first action failed and the two others stopped. Captured at that moment: the same comment later reads moved and done.",
-      "url": "https://github.com/nvuillam/sfdx-hardis-training/pull/41",
+      "url": "https://github.com/nvuillam/sfdx-hardis-training/pull/66",
       "width": 1440,
       "height": 2400,
       "settle": 5000,
@@ -502,7 +502,7 @@
     {
       "name": "github-pr-deployment-actions-moved",
       "_comment": "Lab 3.3 step 12: the same comment once the fix Pull Request is deployed, the crew capacity action moved to it.",
-      "url": "https://github.com/nvuillam/sfdx-hardis-training/pull/41",
+      "url": "https://github.com/nvuillam/sfdx-hardis-training/pull/66",
       "width": 1440,
       "height": 2400,
       "settle": 5000,
