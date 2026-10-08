@@ -96,8 +96,9 @@ In `helios-dev`, create:
 Then the records. Helios supports 12 combinations, three crew types by four roof types, and each
 one needs a Crew Capacity record saying how many panels a day that crew lays on that roof. Typing
 twelve records teaches nothing this lab is about, so the Training menu creates them:
-**Training: Level 2** **(1)** > **Create my lab records** **(2)**, pick **Lab 2.4 - the 12 Crew
-Capacity records**, then **helios-dev**, and answer **Yes** to **Create them?**.
+**Training: Level 2** **(1)** > **Create my lab records** **(2)**. The panel picks **Lab 2.4 - the
+12 Crew Capacity records** and **helios-dev** on its own, the only lab and the only org it offers
+here: answer **Yes** to **Create them?**.
 
 ![The Level 2 Training menu, with Create my lab records](../../_assets/annotated/vscode/sidebar-commands-custom-menu-2--lab-records.png)
 
