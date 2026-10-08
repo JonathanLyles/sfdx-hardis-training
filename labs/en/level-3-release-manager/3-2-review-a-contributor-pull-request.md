@@ -125,7 +125,7 @@ column*. It says nothing about a field going. That is the gap a review is for: t
 thing, the description another, and only one of them is what gets deployed.
 
 **Nothing in the pipeline can catch that.** A layout with one field fewer is a valid deployment, the
-**Metadata** row says `1 updated`, and only somebody who knows the org can see what is missing.
+**Metadata** row counts the layout as one more component `updated`, and only somebody who knows the org can see what is missing.
 
 ### 5. Ask for the change, on the line
 

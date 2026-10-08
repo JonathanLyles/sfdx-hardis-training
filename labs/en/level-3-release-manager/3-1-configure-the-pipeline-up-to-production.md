@@ -463,8 +463,9 @@ You publish them the way you published a User Story in Level 1, with the same bu
 `Configure the pipeline up to production`, exactly as you staged metadata in [Lab 1.5](../level-1-contributor-basics/1-5-retrieve-commit-and-publish-your-changes.md).
 
 **Publish.** In the **DevOps Pipeline** panel, click the **Save / Publish** card **(1)**, the one
-every story has gone through since [Lab 1.5](../level-1-contributor-basics/1-5-retrieve-commit-and-publish-your-changes.md). It asks the target branch: `integration`. It commits
-what is left, runs the cleaning, and pushes the branch.
+every story has gone through since [Lab 1.5](../level-1-contributor-basics/1-5-retrieve-commit-and-publish-your-changes.md). It does not ask for the target branch:
+New User Story recorded `integration` in step 4. Answer that your commit is ready and that it can
+push: it commits what is left, runs the cleaning, and pushes the branch.
 
 ![The Save / Publish card of the DevOps Pipeline panel](../../_assets/annotated/vscode/pipeline-cards--save-publish.png)
 
