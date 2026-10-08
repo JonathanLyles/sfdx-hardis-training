@@ -215,7 +215,8 @@ de promotion autorisée et que `preprod` en est la cible.
 
 La fenêtre liste les cinq stories de la plus récente à la plus ancienne : US-061, US-060, US-059,
 US-057, US-058. Cochez la **première, la troisième et la quatrième**, US-061, US-059 et US-057, et
-laissez US-060 et US-058 tranquilles. Le libellé du bouton compte ce que vous avez coché : **Create
+laissez US-060 et US-058 tranquilles. Les Pull Requests en dessous, le retrofit du [Lab 3.7](3-7-hotfix-and-retrofit.md) et la
+configuration du [Lab 3.8](3-8-monitor-your-production-org.md), sont plus anciennes : ne les cochez pas non plus. Le libellé du bouton compte ce que vous avez coché : **Create
 promotion from uat (3 selected) (Beta)**. Cliquez dessus.
 
 Un onglet d'exécution de commande s'ouvre. Il liste ce qui attend dans `uat`, puis pose une seule
@@ -402,7 +403,7 @@ Regardez maintenant les **Checks** de la Pull Request. L'exécution **Check depl
 et le commentaire sfdx-hardis dit pourquoi : son verdict indique **❌ Cannot merge into `preprod`: Git
 conflict markers in the promotion branch**, et un paragraphe en dessous nomme les fichiers :
 
-> ❌ Nothing was deployed: the promotion branch `promotion/uat/preprod/2026-09-24-0930` still
+> Nothing was deployed: the promotion branch `promotion/uat/preprod/2026-09-24-0930` still
 > contains git conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) in 2 file(s). Solve them on the
 > branch, by hand or with the prompt for a coding agent embedded in this Pull Request description
 > (also saved in `hardis-report/`), then commit and push: the job runs again from there.
